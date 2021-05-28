@@ -1,27 +1,64 @@
 nav{
-	color:black;
-	text-align:center;
-	padding:14px 16px;
+	background-color: #333;
+	overflow: hidden;
+	margin-top: 0px;
+	top: 0px;
+	left: 0px;
 }
-nav:hover{
-	background-color:#faebd7;
-	color:red;	
+nav a{
+	float: left;
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 12px 14px;
+	text-decoration: none;
+	font-size: 17px;
+}
+nav a:hover{
+	background-color: #b0c4de;
+	color: black;
+}
+.menu{
+	position: relative;
+	display: none;
+	float: right;
+}
+.ham{
+	width: 30px;
+	height: 4px;
+	background-color: white;
+	margin: 5px 0;
 }
 h1{
-	text-align:center;
-	top:50%;
-	left:40%;
-	color:black;
-	font-size:50px;
-	text-shadow:2px 2px white;
+	text-align: center;
+	top: 50%;
+	left: 40%;
+	color: black;
+	font-size: 50px;
+	text-shadow: 2px 2px white;
+	animation-name: h1;
+	animation-duration:3s;
+	animation-delay: 0s;
+	animation-iteration-count: 2;
+}
+@keyframes h1{
+	30%{
+		letter-spacing: 15px;
+	}
 }
 .image{
-	background:url("girl.jpg");
-	background-size:cover;
-	height:500px;
+	background: url("girl.jpg");
+	background-size: cover;
+	height: 500px;
+}
+.icon{
+	width: 30px;
+	height: 5px;
+	background-color: black;
+	margin: 4px;
 }
 body{
-	background-color:#fff8dc;
+	background-color: #d3d3d3;
 }
 footer{
 	text-align: center;
@@ -29,7 +66,7 @@ footer{
 	text-shadow:2px 1px black;
 }
 h2{
-	font-size:50px;
+	font-size: 50px;
 	text-shadow: 2px 2px black;
 	text-align: center;
 }
@@ -43,37 +80,75 @@ input[type="text"]{
 	box-sizing: border-box;
 }
 input[type=submit]{
-	width:50%;
-	background-color:#40E0D0;
-	padding:14px 20px;
-	color:white;
-	margin:10px;
+	width: 50%;
+	background-color: #40E0D0;
+	padding: 14px 20px;
+	color: white;
+	margin: 10px;
 }
 input[type=submit]:hover{
-	background-color:#00CED1;
+	background-color: #00CED1;
 }
 fieldset{
-	text-align:center;
+	text-align: center;
 }
 .place-holder{
-	float:left;
-	width:500px;
-	height:400px;
-	background-color:#FFB6C1;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 200px;
+	background-color: #d3d3d3;
+	padding: 10px;
+	height: 500px;
 }
 .image-holder{
-	float:right;
-	width:500px;
-	height:400px;
-	background-color:#FFB6C1;
+	background-color: #f0f8ff;
+	border: 1px solid grey;
+	padding: 20px;
+	font-size: 15px;
+	text-align: center;
 }
-.photo{
-	height:120px;
-	color:red;
-	width:120px;
+.cv{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-gap: 0px;
+	padding: 10px;
+	height: 700px;
+	background-color: grey;
 }
-@media screen and (max-width:300px){
-	body{
-		background:white;
+.left{
+	background: purple;
+	padding: 40px;
+}
+.myself{
+	height: 150px;
+	width: 170px;
+	border-radius: 70px;
+}
+h3{
+	font-size: 25px;
+	color: white;
+	text-transform: uppercase;
+}
+h11{
+	font-size: 60px;
+	text-shadow: 2px 2px black;
+	text-align: center;
+}
+h12{
+	font-size: 30px;
+}
+h13{
+	font-size: 20px;
+	text-decoration: underline;
+}
+.right{
+	background: white;
+	padding: 40px;
+}
+@media screen and (max-width:600px){
+	.menu{
+		display: block;
 	}
 }
+
+
