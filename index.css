@@ -23,6 +23,15 @@ nav a:hover{
 	display: none;
 	float: right;
 }
+#check{
+	float: right;
+	position: relative;
+    right: -29px;
+    height: 26px;
+    width: 22px;
+    top: 2px;
+    z-index: 2;
+}
 .ham{
 	width: 30px;
 	height: 4px;
@@ -49,13 +58,9 @@ h1{
 .image{
 	background: url("girl.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
 	height: 500px;
-}
-.icon{
-	width: 30px;
-	height: 5px;
-	background-color: black;
-	margin: 4px;
+	padding: 30px;
 }
 body{
 	background-color: #d3d3d3;
@@ -94,18 +99,10 @@ fieldset{
 }
 .place-holder{
 	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-gap: 200px;
-	background-color: #d3d3d3;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
 	padding: 10px;
-	height: 500px;
-}
-.image-holder{
-	background-color: #f0f8ff;
-	border: 1px solid grey;
-	padding: 20px;
-	font-size: 15px;
-	text-align: center;
+	height: auto;
 }
 .cv{
 	display: grid;
@@ -119,6 +116,10 @@ fieldset{
 	background: purple;
 	padding: 40px;
 }
+.right{
+	background: white;
+	padding: 40px;
+}
 .myself{
 	height: 150px;
 	width: 170px;
@@ -129,26 +130,38 @@ h3{
 	color: white;
 	text-transform: uppercase;
 }
-h11{
+h5{
 	font-size: 60px;
 	text-shadow: 2px 2px black;
 	text-align: center;
 }
-h12{
-	font-size: 30px;
-}
-h13{
+h6{
 	font-size: 20px;
 	text-decoration: underline;
-}
-.right{
-	background: white;
-	padding: 40px;
 }
 @media screen and (max-width:600px){
 	.menu{
 		display: block;
 	}
+	#navbar{
+		transform-origin: 0% 0%;
+		transform: translate(101% ,0);
+		transition: transform 0s;
+	}
+	#bar input:checked~#navbar{
+		transition-duration: 1s;
+		transform: none;
+	}
+	.place-holder{
+		grid-template-columns: auto;
+	}
+	.blank{
+	height: 100%;
+	width: 100%;
+    }
+    .cv{
+    	grid-template-columns: auto;
+    }
 }
 
 
