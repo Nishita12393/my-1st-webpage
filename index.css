@@ -24,6 +24,7 @@ nav a:hover{
 	float: right;
 }
 #check{
+	display: none;
 	float: right;
 	position: relative;
     right: -29px;
@@ -99,10 +100,14 @@ fieldset{
 }
 .place-holder{
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-gap: 10px;
+	grid-template-columns: auto auto auto;
+	grid-gap: 50px;
 	padding: 10px;
 	height: auto;
+}
+.blank{
+	height: 200px;
+	width: 400px;
 }
 .cv{
 	display: grid;
@@ -161,6 +166,10 @@ h6{
     }
     .cv{
     	grid-template-columns: auto;
+    }
+    #check{
+    	display: block;
+    	opacity: 0;
     }
 }
 
